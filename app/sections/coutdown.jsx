@@ -65,7 +65,7 @@ const Countdown = () => {
         />  
 
       </div>
-      <hr className=" h-[2px] w-full min-w-[18rem] max-w-lg border-t-0 bg-transparent bg-gradient-to-r from-transparent via-white to-transparent "/>
+      <hr className=" h-[2px] w-full mb-6 mt-6 min-w-[18rem] max-w-lg border-t-0 bg-transparent bg-gradient-to-r from-transparent via-white to-transparent "/>
 
     </section>
     
