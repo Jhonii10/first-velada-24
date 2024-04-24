@@ -10,8 +10,9 @@ const Countdown = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       const now = new Date().getTime();
+      
       const distance = EVENT_TIMESTAMP - now;
-
+     
       if (distance < 0) {
         clearInterval(interval);
         setCountdown({ days: '000', hours: '00', minutes: '00', seconds: '00' });
