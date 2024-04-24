@@ -1,5 +1,6 @@
 import Coutdown from "./sections/coutdown";
 import Events from "./sections/events";
+import Footer from "./sections/footer";
 import Hero from "./sections/hero";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
     </div>
     <Coutdown/>
     <Events/>
+    <Footer/>
     </div>
   );
 }
