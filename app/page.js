@@ -1,4 +1,5 @@
 import Coutdown from "./sections/coutdown";
+import Events from "./sections/events";
 import Hero from "./sections/hero";
 
 export default function Home() {
@@ -7,9 +8,8 @@ export default function Home() {
     <div className="h-screen flex justify-center items-center bg-black text-white font-bold ">
       <Hero/>
     </div>
-    
-  
     <Coutdown/>
+    <Events/>
     </div>
   );
 }
