@@ -2,6 +2,7 @@
 
 import { fetchFilteredPlaylist } from '@/app/lib/data';
 import { TrashIcon } from '@heroicons/react/24/solid';
+import { DeletePlay } from './deletePlay';
 
 export default async function PlaylistTable({ query, currentPage,}){
 
@@ -35,10 +36,7 @@ export default async function PlaylistTable({ query, currentPage,}){
                     {play.id}
                   </div>
                   <div className="flex justify-end gap-2 text-black">
-                  <button className="rounded-md border p-2 hover:bg-gray-100" >
-                    <span className="sr-only">Delete</span>
-                    <TrashIcon className="w-5" color='red' />
-                </button>
+                  <DeletePlay id={play.id} />
                   </div>
                 </div>
               </div>
@@ -85,10 +83,7 @@ export default async function PlaylistTable({ query, currentPage,}){
                   </td>
                   <td className="whitespace-nowrap px-3 py-3">
                   <div className="flex justify-end gap-2 text-black">
-                  <button className="rounded-md border p-2 hover:bg-gray-100" >
-                    <span className="sr-only">Delete</span>
-                    <TrashIcon className="w-5 " color='red' />
-                </button>
+                  <DeletePlay id={play.id} />
                   </div>
                   </td>
 
