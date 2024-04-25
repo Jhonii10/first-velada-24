@@ -11,15 +11,21 @@ const Events = () => {
               Aqui puedes enviar tus canciones favoritas 
             </p>
             <div className='scroll-horizontal items-top mt-6 flex flex-col flex-wrap justify-center gap-9 md:flex-row *:md:basis-1/3 '>
-            <button className='inline-block skew-x-[-21deg] cursor-pointer border-2 border-primary font-semibold uppercase px-5 py-2.5 before:absolute before:-inset-0.5 before:origin-right before:scale-x-0 before:bg-primary hover:scale-110 hover:text-secondary hover:before:origin-left hover:before:scale-x-100 aria-disabled:pointer-events-none aria-disabled:border-[#666] aria-disabled:bg-[#666] aria-disabled:text-[#111] ease-in motion-safe:transition-[color,transform] motion-safe:before:transition-transform motion-safe:before:duration-300 motion-safe:before:ease-in motion-safe:hover:delay-100 motion-safe:hover:ease-out motion-safe:hover:before:delay-100 motion-safe:hover:before:ease-out w-full text-base'>
+            <Link
+                href='/agregar-cancion'
+                className='inline-block text-center skew-x-[-21deg] cursor-pointer border-2 border-primary font-semibold uppercase px-5 py-2.5 before:absolute before:-inset-0.5 before:origin-right before:scale-x-0 before:bg-primary hover:scale-110 hover:text-secondary hover:before:origin-left hover:before:scale-x-100 aria-disabled:pointer-events-none aria-disabled:border-[#666] aria-disabled:bg-[#666] aria-disabled:text-[#111] ease-in motion-safe:transition-[color,transform] motion-safe:before:transition-transform motion-safe:before:duration-300 motion-safe:before:ease-in motion-safe:hover:delay-100 motion-safe:hover:ease-out motion-safe:hover:before:delay-100 motion-safe:hover:before:ease-out w-full text-base'>
                 Agregar Canción
-            </button>
+            </Link>
 
-            <button className='inline-block skew-x-[-21deg] cursor-pointer border-2 border-primary font-semibold uppercase px-5 py-2.5 before:absolute before:-inset-0.5 before:origin-right before:scale-x-0 before:bg-primary hover:scale-110 hover:text-secondary hover:before:origin-left hover:before:scale-x-100 aria-disabled:pointer-events-none aria-disabled:border-[#666] aria-disabled:bg-[#666] aria-disabled:text-[#111] ease-in motion-safe:transition-[color,transform] motion-safe:before:transition-transform motion-safe:before:duration-300 motion-safe:before:ease-in motion-safe:hover:delay-100 motion-safe:hover:ease-out motion-safe:hover:before:delay-100 motion-safe:hover:before:ease-out w-full text-base'>Ver playlist</button>
+            <Link
+                href='/playlist'
+                className='inline-block text-center skew-x-[-21deg] cursor-pointer border-2 border-primary font-semibold uppercase px-5 py-2.5 before:absolute before:-inset-0.5 before:origin-right before:scale-x-0 before:bg-primary hover:scale-110 hover:text-secondary hover:before:origin-left hover:before:scale-x-100 aria-disabled:pointer-events-none aria-disabled:border-[#666] aria-disabled:bg-[#666] aria-disabled:text-[#111] ease-in motion-safe:transition-[color,transform] motion-safe:before:transition-transform motion-safe:before:duration-300 motion-safe:before:ease-in motion-safe:hover:delay-100 motion-safe:hover:ease-out motion-safe:hover:before:delay-100 motion-safe:hover:before:ease-out w-full text-base'>
+                Ver playlist
+            </Link>
             </div>
 
             <div className='mt-20 flex  items-center justify-center gap-4 xs:flex-row'>
-            <h3 data-astro-cid-ey7maxor="" tabindex="0" class="text-xl text-neutral-300 text-center">
+            <h3 data-astro-cid-ey7maxor="" tabIndex="0" className="text-xl text-neutral-300 text-center">
                  Web patrocinada por
             </h3>
             <Link 
