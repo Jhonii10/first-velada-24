@@ -11,7 +11,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={quicksand.className}>{children}</body>
+      <body className={quicksand.className}>
+      <div className="bg-black text-white font-bold">
+      {children}
+      </div>
+      </body>
     </html>
   );
 }
