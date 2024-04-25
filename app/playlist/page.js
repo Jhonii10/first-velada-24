@@ -15,7 +15,7 @@ const Page = async ({ searchParams }) => {
         <div className='flex h-screen  flex-col md:flex-row md:overflow-hidden'>
         <div className="flex-grow p-6 md:overflow-y-auto md:p-12 bg-black">
              <Link  href="/" className='block w-10' >
-             <ArrowLeftCircleIcon class="h-10 w-10 text-gray-500" />
+             <ArrowLeftCircleIcon className="h-10 w-10 text-gray-500" />
              </Link>
              <div className="mt-4 flex items-center justify-between gap-2 md:mt-8">
                 <Search placeholder="Buscar cancion..." />

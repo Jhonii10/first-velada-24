@@ -29,3 +29,17 @@ export async function addPlay(prevState, formData) {
           revalidatePath('/playlist');
           redirect('/playlist');
 }
+
+
+export async function deletePlay(id) {
+
+    try {
+      await sql`DELETE FROM playlist WHERE id = ${id}`;
+        revalidatePath('/dashboard/invoices');
+    ;
+    } catch (error) {
+      return {mesage:'Database Error: Failed to delete Invoice.'}
+    }
+    
+    
+  }
