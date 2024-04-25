@@ -25,3 +25,21 @@ export async function fetchFilteredPlaylist( query, currentPage,) {
     throw new Error('Failed to fetch invoices.');
   }
 }
+
+
+export async function fetchInvoicesPages(query) {
+    noStore()
+  try {
+    const count = await sql`SELECT COUNT(*)
+    FROM playlist
+    WHERE
+      playlist.titulo ILIKE ${`%${query}%`}
+  `;
+
+    const totalPages = Math.ceil(Number(count.rows[0].count) / ITEMS_PER_PAGE);
+    return totalPages;
+  } catch (error) {
+    console.error('Database Error:', error);
+    throw new Error('Failed to fetch total number of invoices.');
+  }
+}
