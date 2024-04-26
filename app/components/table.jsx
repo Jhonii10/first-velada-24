@@ -3,6 +3,8 @@
 import { fetchFilteredPlaylist } from '@/app/lib/data';
 import { TrashIcon } from '@heroicons/react/24/solid';
 import { DeletePlay } from './deletePlay';
+import YoutubePlay from './youtubePlay';
+import SpotifyPlay from './spotifyPlay';
 
 export default async function PlaylistTable({ query, currentPage,}){
 
@@ -36,6 +38,8 @@ export default async function PlaylistTable({ query, currentPage,}){
                     {play.id}
                   </div>
                   <div className="flex justify-end gap-2 text-black">
+                  <YoutubePlay url={`https://www.youtube.com/results?search_query=${play.titulo}`}/>
+                  <SpotifyPlay url={`spotify://search/${play.titulo}`}/>
                   <DeletePlay id={play.id} />
                   </div>
                 </div>
@@ -82,7 +86,9 @@ export default async function PlaylistTable({ query, currentPage,}){
                     {play.genero}
                   </td>
                   <td className="whitespace-nowrap px-3 py-3">
-                  <div className="flex justify-end gap-2 text-black">
+                  <div className="flex justify-end gap-2 ">
+                  <YoutubePlay url={`https://www.youtube.com/results?search_query=${play.titulo}`}/>
+                  <SpotifyPlay url={`spotify://search/${play.titulo}`}/>
                   <DeletePlay id={play.id} />
                   </div>
                   </td>
