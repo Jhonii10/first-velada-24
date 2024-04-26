@@ -1,15 +1,29 @@
 'use client'
 import Link from 'next/link';
 import React from 'react';
-import { useFormState } from 'react-dom';
+import { useFormState, useFormStatus } from 'react-dom';
 import { addPlay } from '../lib/actions';
+
+
+function Submit() {
+    const { pending } = useFormStatus();
+    return (
+        <button
+        disabled={pending}
+        type='submit' 
+        className='flex h-10 items-center rounded-lg bg-gray-950 px-4 text-sm font-medium text-white transition-colors hover:bg-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600'>
+        {pending ? "Agregando..." : "Agregar cancion"}
+    </button>
+    );
+  }
 
 const FormMusic = () => {
     const initialState = { message: null, errors: {} };
     const [state, formAction] = useFormState(addPlay, initialState);
 
+
     return (
-            <form action={formAction} className=' p-8 rounded  md:w-1/3  w-72' style={{background:'linear-gradient(#fff 0%, #ffffff80 20%, #0000 100%)'}}  >
+            <form  action={formAction} className=' p-6 rounded  md:w-1/3  w-72' style={{background:'linear-gradient(#fff 0%, #ffffff80 20%, #0000 100%)'}}  >
             <label htmlFor='title' className='font-bold text-sm ' >
             Nombre
         </label>
@@ -53,14 +67,12 @@ const FormMusic = () => {
         >
           Cancelar
         </Link>
-        <button
-            type='submit' 
-            className='flex h-10 items-center rounded-lg bg-gray-950 px-4 text-sm font-medium text-white transition-colors hover:bg-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600'>
-            Agregar cancion
-        </button>
+        <Submit />
         </div>
       </form>
     );
 }
 
 export default FormMusic;
+
+
