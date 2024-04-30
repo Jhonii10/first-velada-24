@@ -6,11 +6,15 @@ import Pagination from '../components/pagination';
 import { fetchInvoicesPages } from '../lib/data';
 import Search from '../components/search';
 
+export const revalidate = 0; 
+
 const Page = async ({ searchParams }) => {
 
+    
     const query = searchParams?.query || '';
     const currentPage = Number(searchParams?.page) || 1;
     const totalPages = await fetchInvoicesPages(query);
+    
     return (
         <div className='flex h-screen  flex-col md:flex-row md:overflow-hidden'>
         <div className="flex-grow p-6 md:overflow-y-auto md:p-12 bg-black">
