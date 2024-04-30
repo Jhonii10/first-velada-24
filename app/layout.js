@@ -1,4 +1,5 @@
 import { Quicksand } from "next/font/google";
+import { Analytics } from '@vercel/analytics/react';
 import "./globals.css";
 
 const quicksand = Quicksand({ subsets: ["latin"] });
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
       <body className={quicksand.className}>
       <div className="bg-black text-white font-bold">
       {children}
+      <Analytics />
       </div>
       </body>
     </html>
