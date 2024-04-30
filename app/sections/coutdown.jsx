@@ -2,10 +2,12 @@
 import React, { useEffect, useState } from 'react';
 import { EVENT_TIMESTAMP } from '../consts/event-date';
 import DateTime from '../components/date';
+import Confetti from 'react-confetti';
 
 
 const Countdown = () => {
   const [countdown, setCountdown] = useState({ days: '000', hours: '00', minutes: '00', seconds: '00' });
+  const [timeEnded, setTimeEnded] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -13,9 +15,10 @@ const Countdown = () => {
       
       const distance = EVENT_TIMESTAMP - now;
      
-      if (distance < 0) {
+      if (distance <= 0) {
         clearInterval(interval);
         setCountdown({ days: '000', hours: '00', minutes: '00', seconds: '00' });
+        setTimeEnded(true);
         return;
       }
 
@@ -32,17 +35,34 @@ const Countdown = () => {
 
   const { days, hours, minutes, seconds } = countdown;
 
+  
+
   return (
     <div className='mx-auto  max-w-6xl px-2  selection:bg-primary selection:text-secondary md:pt-20 lg:px-10'>
     
     <section className=' flex flex-col place-items-center gap-y-10 ' aria-label="cuenta atrás">
     <hr className=" h-[2px] w-full min-w-[18rem] max-w-lg border-t-0 bg-transparent bg-gradient-to-r from-transparent via-white to-transparent md:my-9"/>
-      <h3 className='text-white mb-6 text-balance text-center font-atomic text-2xl  md:text-3xl'>Para el inicio de la Velada Del año faltan...</h3>
-      <div
-		className="grid w-full select-none grid-cols-3 flex-col items-center justify-center gap-y-20 uppercase text-primary md:gap-x-6 md:gap-y-11"
-		data-date={EVENT_TIMESTAMP}
-		role="timer"
-	>
+      
+      {
+        timeEnded 
+        ? <>
+            <h3 className='text-2xl '> ¡El evento ha empezado! 🎉</h3>
+            <div>
+               programacion del evento
+            </div>
+            
+          <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%' }}>
+            <Confetti  />
+          </div>
+          </>
+        :
+        <>
+        <h3 className='text-white mb-6 text-balance text-center font-atomic text-2xl  md:text-3xl'>Para el inicio de la Velada Del año faltan...</h3>
+        <div
+          className="grid w-full select-none grid-cols-3 flex-col items-center justify-center gap-y-20 uppercase text-primary md:gap-x-6 md:gap-y-11"
+          data-date={EVENT_TIMESTAMP}
+          role="timer"
+        >
 
         <DateTime
             dateType={'Dias'}
@@ -66,6 +86,9 @@ const Countdown = () => {
         />  
 
       </div>
+      </>
+      }
+      
       <hr className=" h-[2px] w-full mb-6 mt-6 min-w-[18rem] max-w-lg border-t-0 bg-transparent bg-gradient-to-r from-transparent via-white to-transparent "/>
 
     </section>

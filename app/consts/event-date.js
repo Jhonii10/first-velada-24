@@ -1,4 +1,5 @@
-export const EVENT_TIMESTAMP = new Date('2024-06-08T08:00:00-04:00');
+export const EVENT_TIMESTAMP = new Date('2024-06-08T08:00:00-04:00'); //1717848000000 
+
 
 
 
