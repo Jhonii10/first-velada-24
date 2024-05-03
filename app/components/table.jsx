@@ -40,8 +40,8 @@ export default async function PlaylistTable({ query, currentPage,}){
                     {play.id}
                   </div>
                   <div className="flex justify-end gap-2 text-black">
-                  <YoutubePlay url={`https://www.youtube.com/results?search_query=${play.titulo}`}/>
-                  <SpotifyPlay url={`spotify://search/${play.titulo}`}/>
+                  <YoutubePlay url={`https://www.youtube.com/results?search_query=${play.titulo}+${play.artista}`}/>
+                  <SpotifyPlay url={`spotify://search/${play.titulo}+${play.artista}`}/>
                   <DeletePlay id={play.id} />
                   </div>
                 </div>
@@ -89,8 +89,8 @@ export default async function PlaylistTable({ query, currentPage,}){
                   </td>
                   <td className="whitespace-nowrap px-3 py-3">
                   <div className="flex justify-end gap-2 ">
-                  <YoutubePlay url={`https://www.youtube.com/results?search_query=${play.titulo}`}/>
-                  <SpotifyPlay url={`spotify://search/${play.titulo}`}/>
+                  <YoutubePlay url={`https://www.youtube.com/results?search_query=${play.titulo}+${play.artista}`}/>
+                  <SpotifyPlay url={`spotify://search/${play.titulo}+${play.artista}`}/>
                   <DeletePlay id={play.id} />
                   </div>
                   </td>
