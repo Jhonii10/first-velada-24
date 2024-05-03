@@ -19,6 +19,13 @@ export default function Hero() {
             Finca Manabi
         </div>
       </Link>
+
+      <span
+        tabIndex={0}
+        className="text-md text-accent text-center text-red-700 pt-2"
+      >
+        ¡Cupos Agotados!
+      </span>
     
      
       </div>
