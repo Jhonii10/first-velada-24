@@ -21,7 +21,7 @@ const Footer = () => {
                 <hr className='absolute top-0 h-[2px] w-full min-w-[18rem] border-t-0 bg-transparent bg-gradient-to-r from-transparent via-white to-transparent bg-center md:my-9'/>
                 <div className='flex flex-col gap-4 text-center md:flex-row lg:gap-6'>
                     <span className='text-xl text-neutral-300 text-center'>
-                        © 2024 La primer Velada del Año{'  '}
+                        © 2024 La primer velada del Año{'  '}
                         <span className='hidden md:inline'>|</span>
                         <br aria-hidden="true" className="block md:hidden"/>
                         {'  '}Todos los derechos reservados.

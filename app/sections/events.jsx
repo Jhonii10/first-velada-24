@@ -30,7 +30,7 @@ const Events = () => {
             </h3>
             <Link 
                 href='https://www.jhoniipia.com'
-                className='transition hover:scale-110 focus:scale-110 motion-reduce:transition-none motion-reduce:hover:scale-100 motion-reduce:focus:scale-100 text-2xl font-semibold  text-white text-center'
+                className='transition hover:scale-110 focus:scale-110 motion-reduce:transition-none motion-reduce:hover:scale-100 motion-reduce:focus:scale-100 text-2xl   text-white text-center font-bold'
                 >JhoniIpia
             </Link>
             </div>
