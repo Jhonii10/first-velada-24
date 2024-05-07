@@ -24,7 +24,7 @@ export default async function PlaylistTable({ query, currentPage,}){
               >
                 <div className="flex items-center justify-between border-b pb-4">
                   <div>
-                    <div className="mb-2 flex items-center text-black">
+                    <div className="mb-2 flex items-center text-black capitalize">
                       <p>{play.titulo}</p>
                     </div>
                     <p className="text-sm text-gray-500">{play.artista}</p>
@@ -77,8 +77,8 @@ export default async function PlaylistTable({ query, currentPage,}){
                     {play.id}
                   </td>
                   <td className="whitespace-nowrap py-3 pl-6 pr-3">
-                    <div className="flex items-center gap-3">
-                      <p>{(play.titulo)}</p>
+                    <div className="flex items-center gap-3 capitalize">
+                      <p >{(play.titulo)}</p>
                     </div>
                   </td>
                   <td className="whitespace-nowrap px-3 py-3">
