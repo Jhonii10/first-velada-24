@@ -57,7 +57,7 @@ const Countdown = () => {
           </>
         :
         <>
-        <h3 className='text-white mb-6 text-balance text-center font-atomic text-2xl  md:text-3xl'>Para el inicio de la Velada Del año faltan...</h3>
+        <h3 className='text-white mb-6 text-balance text-center font-atomic text-2xl  md:text-3xl'>Para el inicio de la velada del año faltan...</h3>
         <div
           className="grid w-full select-none grid-cols-3 flex-col items-center justify-center gap-y-20 uppercase text-primary md:gap-x-6 md:gap-y-11"
           data-date={EVENT_TIMESTAMP}
