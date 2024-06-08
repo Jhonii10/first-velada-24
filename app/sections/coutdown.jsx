@@ -48,11 +48,11 @@ const Countdown = () => {
         ? <>
             <h3 className='text-2xl '> ¡El evento ha empezado! 🎉</h3>
             <div>
-               programacion del evento
+               Esperamos que lo disfruten 
             </div>
             
-          <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%' }}>
-            <Confetti  />
+          <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: 1000 }}>
+            <Confetti width={window.innerWidth} height={window.innerHeight} />
           </div>
           </>
         :
