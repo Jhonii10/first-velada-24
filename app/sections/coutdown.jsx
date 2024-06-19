@@ -46,10 +46,10 @@ const Countdown = () => {
       {
         timeEnded 
         ? <>
-            <h3 className='text-2xl '> ¡El evento ha empezado! 🎉</h3>
-            <div>
-               Esperamos que lo disfruten 
-            </div>
+            <h3 className='text-2xl '> ¡El evento ha terminado! 🎉</h3>
+            <p>
+               Esperamos que lo hayan disfrutado. 
+            </p>
             
           <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: 1000 }}>
             <Confetti width={window.innerWidth} height={window.innerHeight} />
